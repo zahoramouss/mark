@@ -1,4 +1,4 @@
-import 'package:e_commerce/functions.dart';
+
 import 'package:flutter/cupertino.dart';
 import '../Resources/string_resource.dart';
 import 'package:flutter/material.dart';

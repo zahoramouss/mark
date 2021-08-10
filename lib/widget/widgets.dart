@@ -188,7 +188,10 @@ Widget icon(context,String iconname){
       bool payed=false;
       int _value=1;
       bool fav=false;
-      return  Container(
+      return  GestureDetector(
+          //tap function
+          onTap: (){},
+        child: Container(
         width: imgw,
         height: (imgh+widh),//wid
         decoration: BoxDecoration(
@@ -352,7 +355,7 @@ Widget icon(context,String iconname){
             ),
 
           ],
-        ),);
+        ),));
 
 
     }
@@ -372,7 +375,11 @@ Widget icon(context,String iconname){
     bool payed=false;
     int _value=1;
     bool fav=false;
-   return Container(
+   return  GestureDetector(
+        //tap function
+        onTap: (){},
+    child:
+    Container(
      width: imgw,
      height: (imgh+widh),//wid
      decoration: BoxDecoration(
@@ -504,7 +511,7 @@ Widget icon(context,String iconname){
            ),
          ),
        ],
-     ),);
+     ),));
   }
 }
 class newarrival extends StatefulWidget{
@@ -522,138 +529,143 @@ class newstate extends State<newarrival>{
     bool payed=false;
     int _value=1;
     bool fav=false;
-    return Container(
-      width: imgw,
-      height: (imgh+widh),//wid
-      decoration: BoxDecoration(
-          color:Colors.white,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(radius),
-            topLeft: Radius.circular(radius),
-            topRight: Radius.circular(radius),
-            bottomRight: Radius.circular(radius),),
-          // color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              spreadRadius: 0,
-              blurRadius: 5,
-              offset: Offset(0,2),
-              color:Color(0xff47a8b9cd),
-            )
-          ]
-      ),
-      margin: EdgeInsets.only(right: 12,left: 12),
-      child:  Column(
-        children: [
-          Container(
-            //color:Colors.red,
-            // color:Colors.amber,
-              child:Stack(
-                children: [
+    return
+    GestureDetector(
+      //tap function
+      onTap: (){},
+      child:   Container(
+        width: imgw,
+        height: (imgh+widh),//wid
+        decoration: BoxDecoration(
+            color:Colors.white,
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(radius),
+              topLeft: Radius.circular(radius),
+              topRight: Radius.circular(radius),
+              bottomRight: Radius.circular(radius),),
+            // color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                spreadRadius: 0,
+                blurRadius: 5,
+                offset: Offset(0,2),
+                color:Color(0xff47a8b9cd),
+              )
+            ]
+        ),
+        margin: EdgeInsets.only(right: 12,left: 12),
+        child:  Column(
+          children: [
+            Container(
+              //color:Colors.red,
+              // color:Colors.amber,
+                child:Stack(
+                  children: [
 
 //////////////////////////////////////////////////////////////////////imqges
-                  ClipRRect(
-                    borderRadius:BorderRadius.only(
-                        topRight: Radius.circular(radius),
-                        topLeft: Radius.circular(radius)
+                    ClipRRect(
+                      borderRadius:BorderRadius.only(
+                          topRight: Radius.circular(radius),
+                          topLeft: Radius.circular(radius)
+                      ),
+
+                      child: Image.asset('assets/images/img2.png',width: imgw,height: imgh,fit: BoxFit.fill,),
                     ),
+                    Container(
+                      margin: EdgeInsets.only(right:120,top: 0),
 
-                    child: Image.asset('assets/images/img2.png',width: imgw,height: imgh,fit: BoxFit.fill,),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right:120,top: 0),
-
-                    child: IconButton(
-                      icon: (fav)?Image.asset('assets/images/like2.png',scale: 5,):Image.asset('assets/images/unlike23.png',scale: 5,),
-                      onPressed: (){
-                        setState(() {
-                          fav=!fav;
-                        });
-                      },
+                      child: IconButton(
+                        icon: (fav)?Image.asset('assets/images/like2.png',scale: 5,):Image.asset('assets/images/unlike23.png',scale: 5,),
+                        onPressed: (){
+                          setState(() {
+                            fav=!fav;
+                          });
+                        },
+                      ),
                     ),
-                  ),
-                ],
-              )
-          ),
-          Expanded(
-            child:Container(
-              margin: EdgeInsets.only(left: 12),
-              child: Stack(
-                children: [
-                  Container(
-                    width: imgw,
-                    height: widh,
-                    decoration:BoxDecoration(
-                      //color: Colors.red,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(radius),
-                        bottomRight: Radius.circular(radius),
-                      ),),
+                  ],
+                )
+            ),
+            Expanded(
+              child:Container(
+                margin: EdgeInsets.only(left: 12),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: imgw,
+                      height: widh,
+                      decoration:BoxDecoration(
+                        //color: Colors.red,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(radius),
+                          bottomRight: Radius.circular(radius),
+                        ),),
 
 
-                    //right:( MediaQuery.of(context).size.width*45/100),
-                    child:new Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      //right:( MediaQuery.of(context).size.width*45/100),
+                      child:new Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          //  mainAxisAlignment: MainAxisAlignment.spaceAround,
 
-                        children:[
-                          Container(
-                            child: Text(str_prname,style: TextStyle(
-                              fontFamily: stc_font,
-                              fontSize: 14.5,
-                              color: blac,
-                              fontWeight: FontWeight.w500,
-                            ),),
-                          ),
-
-
-
-                        ]
-                    ),
-                  ),
-                  Container(
-                    // padding: EdgeInsets.only(top: 10),
-                      child:Align(
-                        alignment: Alignment.bottomLeft,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Expanded(
-                              child:  Text(str_price,style: TextStyle(
+                          children:[
+                            Container(
+                              child: Text(str_prname,style: TextStyle(
                                 fontFamily: stc_font,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: ongo,
-                              )),
-                            ),
-                            GestureDetector(
-                              //color: Colors.green,
-                              child:(payed)?Image.asset('assets/images/home-chariot-blue.png',scale: 6,):Image.asset('assets/images/home-chariot-blue-2.png',scale:6),
-                              onDoubleTap: (){
-                                print(payed);
-
-                                setState(() {
-
-                                  payed=true;
-
-                                });
-                                print(payed);
-                              },
+                                fontSize: 14.5,
+                                color: blac,
+                                fontWeight: FontWeight.w500,
+                              ),),
                             ),
 
 
-                          ],
-                        ),
-                      )
-                  ),
+
+                          ]
+                      ),
+                    ),
+                    Container(
+                      // padding: EdgeInsets.only(top: 10),
+                        child:Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Expanded(
+                                child:  Text(str_price,style: TextStyle(
+                                  fontFamily: stc_font,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: ongo,
+                                )),
+                              ),
+                              GestureDetector(
+                                //color: Colors.green,
+                                child:(payed)?Image.asset('assets/images/home-chariot-blue.png',scale: 6,):Image.asset('assets/images/home-chariot-blue-2.png',scale:6),
+                                onDoubleTap: (){
+                                  print(payed);
+
+                                  setState(() {
+
+                                    payed=true;
+
+                                  });
+                                  print(payed);
+                                },
+                              ),
 
 
-                ],
+                            ],
+                          ),
+                        )
+                    ),
+
+
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
-      ),);
+          ],
+        ),),
+    );
   }
 }
